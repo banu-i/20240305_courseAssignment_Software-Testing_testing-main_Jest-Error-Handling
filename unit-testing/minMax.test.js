@@ -2,6 +2,16 @@
 // Erstelle eine passende Test-Datei für "minMax.js".
 // Überlege selbst jeweils 3 sinnvolle Testfälle. Implementiere diese.
 // Es darf bei Abgabe kein Test fehlschlagen.
+// --> ERLEDIGT.
+
+// Kursaufgabe 20240305 - Aufgabe 1:
+// Überarbeitet eure Testfiles von gestern.
+// Ihr sollt mithilfe des heutigen Vormittags alle Testfiles
+// sinnvoll mit describe strukturieren und alle Tests sollten
+// sinnvoll in Arrange, Act, Assert aufgeteilt sein
+// (dabei darf Arrange leer sein).
+// Es müssen also in der Abgabe für diese Aufgabe also die
+// gleichen Dateien wie gestern enthalten sein, nur "cleaner".
 
 const minMax = require("./minMax.js");
 
