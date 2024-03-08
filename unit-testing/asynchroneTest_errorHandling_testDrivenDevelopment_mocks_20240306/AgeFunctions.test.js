@@ -1,4 +1,4 @@
-// Kursaufgabe 20240326 - Aufgabe 2:
+// Kursaufgabe 20240306 - Aufgabe 2:
 // Ihr sollt in dieser Aufgabe die AgeFunction.test.js so erweitern,
 // dass die Funktion isAdult eine Line-Coverage von 100% hat.
 
