@@ -35,36 +35,36 @@ describe("Testing POST Functions of Todo Route", () => {
     );
   });
 
-  test("Teste POST markTodo Funktion", async () => {
+  test("Teste PUT markTodo Funktion", async () => {
     const todoId = 6;
     const mockData = {
-      data: { todo: returnedTodo1 },
+      data: { updatedTodo: todoId },
     };
-    axios.post.mockResolvedValue(mockData);
+    axios.put.mockResolvedValue(mockData);
 
-    const result = await TodosMutations.markTodo(todoId);
+    const result = await TodosMutations.markTodo(todoId, true);
 
-    expect(result).toEqual(mockData.data.todo);
-    expect(axios.post).toHaveBeenCalledTimes(1);
-    expect(axios.post).toHaveBeenCalledWith(
+    expect(result).toEqual(mockData.data.updatedTodo);
+    expect(axios.put).toHaveBeenCalledTimes(1);
+    expect(axios.put).toHaveBeenCalledWith(
       "http://localhost:5050/v1/todos/mark",
-      {}
+      { todoId: todoId, newIsDone: true }
     );
   });
 
-  test("Teste POST update Funktion", async () => {
+  test("Teste PUT update Funktion", async () => {
     const todoId = 6;
     const updatedTask = "Examen machen";
     const mockData = {
       data: { todo: returnedTodo1 },
     };
-    axios.post.mockResolvedValue(mockData);
+    axios.put.mockResolvedValue(mockData);
 
     const result = await TodosMutations.markTodo(todoId, updatedTask);
 
     expect(result).toEqual(mockData.data.todo);
-    expect(axios.post).toHaveBeenCalledTimes(1);
-    expect(axios.post).toHaveBeenCalledWith(
+    expect(axios.put).toHaveBeenCalledTimes(1);
+    expect(axios.put).toHaveBeenCalledWith(
       "http://localhost:5050/v1/todos/${todoId}/update",
       { updatedTask }
     );
