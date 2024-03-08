@@ -52,8 +52,6 @@ test("Test für ungleich/nicht String Antworten", () => {
   expect(() => {
     isRightSolutionForQuestion("frage_1", 88);
   }).toThrow(TypeError);
-
-  test("Test für ");
 });
 
 // Zur Aufgabe 2.4: Beschreibung Test cases |100% Line Coverage
