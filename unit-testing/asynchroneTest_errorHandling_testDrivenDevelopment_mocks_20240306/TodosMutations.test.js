@@ -70,18 +70,18 @@ describe("Testing POST Functions of Todo Route", () => {
     );
   });
 
-  test("Teste POST deleteTodo Funktion", async () => {
+  test("Teste DELETE deleteTodo Funktion", async () => {
     const todoId = 6;
     const mockData = {
       data: { sucess: true },
     };
-    axios.post.mockResolvedValue(mockData);
+    axios.delete.mockResolvedValue(mockData);
 
     const result = await TodosMutations.deleteTodo(todoId);
 
     expect(result).toEqual(mockData.data.todo);
-    expect(axios.post).toHaveBeenCalledTimes(1);
-    expect(axios.post).toHaveBeenCalledWith(
+    expect(axios.delete).toHaveBeenCalledTimes(1);
+    expect(axios.delete).toHaveBeenCalledWith(
       "http://localhost:5050/v1/todos/delete",
       {}
     );
