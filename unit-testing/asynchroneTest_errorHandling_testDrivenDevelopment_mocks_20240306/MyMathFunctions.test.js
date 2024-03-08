@@ -4,7 +4,7 @@ describe("Test Basic Math Add Functions", () => {
   test("Basic Add Function to pass with Basic input", () => {
     const result = addNumbers(10, 5);
     console.log("My Result", result);
-    expect(result).toBe(2);
+    expect(result).toBe(15);
   });
 
   // describe("Test Basic Math Divide Functions", () => {

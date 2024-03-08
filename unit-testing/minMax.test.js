@@ -63,7 +63,7 @@ describe("Min-Max Tests", () => {
     const b = 10;
 
     // Act
-    const result = minMax.max(a, b);
+    const result = minMax.min(a, b);
 
     //  Assert
     expect(result).toBe(-2);
@@ -119,7 +119,7 @@ describe("Min-Max Tests", () => {
       const result = minMax.max(a, b);
 
       // Assert
-      expect(result).not.toBe(8);
+      expect(result).toBe(8);
     });
   });
 });

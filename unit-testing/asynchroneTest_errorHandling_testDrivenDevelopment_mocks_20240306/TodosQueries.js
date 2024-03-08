@@ -32,4 +32,4 @@ async function fetchTodoByUserId(userId) {
   return todos;
 }
 
-module.exports = { fetchAllTodos, fetchTodoById };
+module.exports = { fetchAllTodos, fetchTodoById, fetchTodoByUserId };
