@@ -64,7 +64,7 @@ describe("Testing POST Functions of Todo Route", () => {
     expect(result).toEqual(mockData.data.updatedTodo);
     expect(axios.put).toHaveBeenCalledTimes(1);
     expect(axios.put).toHaveBeenCalledWith(
-      "http://localhost:5050/v1/todos/mark",
+      "http://localhost:5050/v1/todos/update",
       { todoId: todoId, newIsDone: true }
     );
   });
